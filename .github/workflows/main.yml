@@ -20,7 +20,7 @@ jobs:
         with:
           script: |
             github.rest.pulls.createReview({
-              pull_number: context.repo.pull.number,
+              pull_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: 'LGTM!',
